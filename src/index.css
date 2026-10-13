@@ -1,0 +1,327 @@
+@import "tailwindcss";
+
+@theme {
+  --font-display: "Outfit", sans-serif;
+  --font-script: "Caveat", cursive;
+  --font-sans: "Plus Jakarta Sans", sans-serif;
+}
+
+/* ==========================================================================
+   THEME DEFINITIONS: CSS Variables for all visual themes
+   ========================================================================== */
+
+/* 1. Ruby Noir / Crimson Luxury (Default Active Theme) */
+:root, [data-theme="ruby-noir"] {
+  color-scheme: dark;
+  --bg-canvas: #090608;
+  --bg-surface: #130C11;
+  --bg-surface-elevated: #1D121A;
+  --bg-surface-hover: #261823;
+  --border-subtle: rgba(114, 63, 244, 0.16);
+  --border-active: rgba(166, 154, 196, 0.45);
+  --border-card: rgba(255, 255, 255, 0.08);
+  --primary: #121ebe;
+  --primary-hover: hsl(248, 65%, 42%);
+  --primary-glow: rgba(124, 29, 225, 0.35);
+  --primary-subtle: rgba(98, 29, 225, 0.12);
+  --accent: hsl(245, 56%, 51%);
+  --accent-secondary: #decdfe;
+  --text-title: #f5f1ff;
+  --text-body: #ebe4ff;
+  --text-muted: #b7a4fd;
+  --text-dim: #807e9f;
+  --stroke-subtle: rgba(134, 113, 251, 0.22);
+  --stroke-active: rgba(39, 29, 225, 0.55);
+  --selection-bg: #5b1de1;
+  --selection-text: #FFFFFF;
+  --badge-bg: rgba(45, 29, 225, 0.16);
+  --badge-border: rgba(138, 113, 251, 0.35);
+  --badge-text: #dbcdfe;
+  --glow-1: rgba(61, 18, 190, 0.28);
+  --glow-2: rgba(108, 63, 244, 0.16);
+  --scrollbar-thumb: #5a12be;
+  --scrollbar-thumb-hover: #681de1;
+}
+
+/* 2. Obsidian Emerald / Matrix Cyber */
+[data-theme="emerald-matrix"] {
+  color-scheme: dark;
+  --bg-canvas: #040A06;
+  --bg-surface: #09150E;
+  --bg-surface-elevated: #0F2015;
+  --bg-surface-hover: #162C1E;
+  --border-subtle: rgba(16, 185, 129, 0.16);
+  --border-active: rgba(16, 185, 129, 0.45);
+  --border-card: rgba(255, 255, 255, 0.08);
+  --primary: #047857;
+  --primary-hover: #059669;
+  --primary-glow: rgba(16, 185, 129, 0.35);
+  --primary-subtle: rgba(16, 185, 129, 0.12);
+  --accent: #34D399;
+  --accent-secondary: #A7F3D0;
+  --text-title: #ECFDF5;
+  --text-body: #D1FAE5;
+  --text-muted: #A7F3D0;
+  --text-dim: #6EE7B7;
+  --stroke-subtle: rgba(52, 211, 153, 0.22);
+  --stroke-active: rgba(5, 150, 105, 0.55);
+  --selection-bg: #059669;
+  --selection-text: #FFFFFF;
+  --badge-bg: rgba(5, 150, 105, 0.16);
+  --badge-border: rgba(52, 211, 153, 0.35);
+  --badge-text: #A7F3D0;
+  --glow-1: rgba(4, 120, 87, 0.28);
+  --glow-2: rgba(16, 185, 129, 0.16);
+  --scrollbar-thumb: #047857;
+  --scrollbar-thumb-hover: #059669;
+}
+
+/* 3. Amethyst Nebula / Cosmic Lilac */
+[data-theme="amethyst-nebula"] {
+  color-scheme: dark;
+  --bg-canvas: #07050F;
+  --bg-surface: #0E0A1D;
+  --bg-surface-elevated: #16102D;
+  --bg-surface-hover: #1E163D;
+  --border-subtle: rgba(139, 92, 246, 0.16);
+  --border-active: rgba(139, 92, 246, 0.45);
+  --border-card: rgba(255, 255, 255, 0.08);
+  --primary: #6D28D9;
+  --primary-hover: #7C3AED;
+  --primary-glow: rgba(139, 92, 246, 0.35);
+  --primary-subtle: rgba(139, 92, 246, 0.12);
+  --accent: #A78BFA;
+  --accent-secondary: #DDD6FE;
+  --text-title: #FAF5FF;
+  --text-body: #F3E8FF;
+  --text-muted: #DDD6FE;
+  --text-dim: #C4B5FD;
+  --stroke-subtle: rgba(167, 139, 250, 0.22);
+  --stroke-active: rgba(124, 58, 237, 0.55);
+  --selection-bg: #7C3AED;
+  --selection-text: #FFFFFF;
+  --badge-bg: rgba(124, 58, 237, 0.16);
+  --badge-border: rgba(167, 139, 250, 0.35);
+  --badge-text: #DDD6FE;
+  --glow-1: rgba(109, 40, 217, 0.28);
+  --glow-2: rgba(139, 92, 246, 0.16);
+  --scrollbar-thumb: #6D28D9;
+  --scrollbar-thumb-hover: #7C3AED;
+}
+
+/* 4. Amber Gold / Editorial Bronze */
+[data-theme="amber-gold"] {
+  color-scheme: dark;
+  --bg-canvas: #090704;
+  --bg-surface: #140F08;
+  --bg-surface-elevated: #1F170E;
+  --bg-surface-hover: #2B2014;
+  --border-subtle: rgba(217, 119, 6, 0.16);
+  --border-active: rgba(217, 119, 6, 0.45);
+  --border-card: rgba(255, 255, 255, 0.08);
+  --primary: #B45309;
+  --primary-hover: #D97706;
+  --primary-glow: rgba(217, 119, 6, 0.35);
+  --primary-subtle: rgba(217, 119, 6, 0.12);
+  --accent: #FBBF24;
+  --accent-secondary: #FDE68A;
+  --text-title: #FFFBEB;
+  --text-body: #FEF3C7;
+  --text-muted: #FDE68A;
+  --text-dim: #F59E0B;
+  --stroke-subtle: rgba(251, 191, 36, 0.22);
+  --stroke-active: rgba(217, 119, 6, 0.55);
+  --selection-bg: #D97706;
+  --selection-text: #FFFFFF;
+  --badge-bg: rgba(217, 119, 6, 0.16);
+  --badge-border: rgba(251, 191, 36, 0.35);
+  --badge-text: #FDE68A;
+  --glow-1: rgba(180, 83, 9, 0.28);
+  --glow-2: rgba(245, 158, 11, 0.16);
+  --scrollbar-thumb: #B45309;
+  --scrollbar-thumb-hover: #D97706;
+}
+
+/* 5. Midnight Sapphire (Original Classic Deep Navy) */
+[data-theme="midnight-navy"] {
+  color-scheme: dark;
+  --bg-canvas: #080808;
+  --bg-surface: #111111;
+  --bg-surface-elevated: #181818;
+  --bg-surface-hover: #222222;
+  --border-subtle: rgba(37, 99, 235, 0.18);
+  --border-active: rgba(37, 99, 235, 0.45);
+  --border-card: rgba(255, 255, 255, 0.08);
+  --primary: #1E3A8A;
+  --primary-hover: #2563EB;
+  --primary-glow: rgba(37, 99, 235, 0.35);
+  --primary-subtle: rgba(37, 99, 235, 0.12);
+  --accent: #60A5FA;
+  --accent-secondary: #93C5FD;
+  --text-title: #DBEAFE;
+  --text-body: #BFDBFE;
+  --text-muted: #93C5FD;
+  --text-dim: #60A5FA;
+  --stroke-subtle: rgba(96, 165, 250, 0.22);
+  --stroke-active: rgba(37, 99, 235, 0.45);
+  --selection-bg: #1E3A8A;
+  --selection-text: #FFFFFF;
+  --badge-bg: rgba(37, 99, 235, 0.15);
+  --badge-border: rgba(96, 165, 250, 0.3);
+  --badge-text: #93C5FD;
+  --glow-1: rgba(30, 58, 138, 0.25);
+  --glow-2: rgba(59, 130, 246, 0.15);
+  --scrollbar-thumb: #1E3A8A;
+  --scrollbar-thumb-hover: #2563EB;
+}
+
+/* 6. Studio Paper / Clean Architectural Light */
+[data-theme="studio-light"] {
+  color-scheme: light;
+  --bg-canvas: #F8FAFC;
+  --bg-surface: #FFFFFF;
+  --bg-surface-elevated: #F1F5F9;
+  --bg-surface-hover: #E2E8F0;
+  --border-subtle: rgba(15, 23, 42, 0.12);
+  --border-active: rgba(15, 23, 42, 0.45);
+  --border-card: rgba(15, 23, 42, 0.1);
+  --primary: #0F172A;
+  --primary-hover: #1E293B;
+  --primary-glow: rgba(15, 23, 42, 0.25);
+  --primary-subtle: rgba(15, 23, 42, 0.08);
+  --accent: #2563EB;
+  --accent-secondary: #475569;
+  --text-title: #0F172A;
+  --text-body: #1E293B;
+  --text-muted: #475569;
+  --text-dim: #64748B;
+  --stroke-subtle: rgba(15, 23, 42, 0.16);
+  --stroke-active: rgba(15, 23, 42, 0.45);
+  --selection-bg: #0F172A;
+  --selection-text: #FFFFFF;
+  --badge-bg: rgba(15, 23, 42, 0.08);
+  --badge-border: rgba(15, 23, 42, 0.25);
+  --badge-text: #0F172A;
+  --glow-1: rgba(37, 99, 235, 0.1);
+  --glow-2: rgba(15, 23, 42, 0.06);
+  --scrollbar-thumb: #94A3B8;
+  --scrollbar-thumb-hover: #64748B;
+}
+
+/* ==========================================================================
+   GLOBAL BASE STYLES
+   ========================================================================== */
+
+body {
+  font-family: var(--font-sans);
+  background-color: var(--bg-canvas);
+  color: var(--text-body);
+  overflow-x: hidden;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+::selection {
+  background-color: var(--selection-bg);
+  color: var(--selection-text);
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: var(--bg-canvas);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--scrollbar-thumb);
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--scrollbar-thumb-hover);
+}
+
+/* Large typography stroke effect for hero PORTFOLIO text */
+.text-stroke-subtle {
+  -webkit-text-stroke: 1.5px var(--stroke-subtle);
+  color: transparent;
+}
+
+.text-stroke-active {
+  -webkit-text-stroke: 1.5px var(--stroke-active);
+  color: transparent;
+}
+
+/* Gradients & Text utility classes */
+.font-theme-gradient {
+  background: linear-gradient(135deg, var(--text-title) 0%, var(--text-muted) 50%, var(--accent) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.font-navy-gradient {
+  background: linear-gradient(135deg, var(--text-title) 0%, var(--text-muted) 50%, var(--accent) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.font-navy-title {
+  color: var(--text-title) !important;
+}
+
+.font-navy-body {
+  color: var(--text-body) !important;
+}
+
+/* ==========================================================================
+   DYNAMIC THEME MAPPINGS ACROSS ALL COMPONENTS
+   ========================================================================== */
+
+/* Canvases & Backgrounds */
+.bg-\[\#080808\], .bg-\[\#0c0c0c\], .bg-\[\#050505\], .bg-\[\#0a0a0a\] {
+  background-color: var(--bg-canvas) !important;
+}
+
+/* Surfaces & Cards */
+.bg-\[\#111111\], .bg-\[\#161616\], .bg-\[\#121212\], .bg-\[\#1a1a1a\], .bg-\[\#181818\] {
+  background-color: var(--bg-surface) !important;
+}
+
+/* Primary Button Backgrounds & Accents */
+.bg-\[\#1E3A8A\] {
+  background-color: var(--primary) !important;
+}
+.bg-\[\#2563EB\], .hover\:bg-\[\#2563EB\]:hover {
+  background-color: var(--primary-hover) !important;
+}
+
+/* Text Colors */
+.text-\[\#DBEAFE\], .text-\[\#EFF6FF\] {
+  color: var(--text-title) !important;
+}
+.text-\[\#BFDBFE\] {
+  color: var(--text-body) !important;
+}
+.text-\[\#93C5FD\] {
+  color: var(--text-muted) !important;
+}
+.text-\[\#60A5FA\] {
+  color: var(--accent) !important;
+}
+
+/* Borders */
+.border-blue-900\/30, .border-blue-900\/40, .border-\[\#3B82F6\], .border-\[\#3B82F6\]\/30, .border-\[\#3B82F6\]\/40, .border-\[\#3B82F6\]\/60 {
+  border-color: var(--border-active) !important;
+}
+
+/* Glow Elements */
+.bg-\[\#1E3A8A\]\/10, .bg-\[\#1E3A8A\]\/15, .bg-\[\#1E3A8A\]\/25 {
+  background-color: var(--glow-1) !important;
+}
+.bg-\[\#3B82F6\]\/10, .bg-\[\#3B82F6\]\/15, .bg-\[\#3B82F6\]\/25 {
+  background-color: var(--glow-2) !important;
+}
+
+/* Shadows */
+.shadow-\[\#1E3A8A\]\/30, .shadow-\[\#1E3A8A\]\/20 {
+  box-shadow: 0 10px 25px -5px var(--primary-glow) !important;
+}
